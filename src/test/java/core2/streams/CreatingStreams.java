@@ -1,4 +1,4 @@
-package core.streams;
+package core2.streams;
 
 import java.io.IOException;
 import java.math.BigInteger;
