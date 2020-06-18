@@ -22,8 +22,8 @@ public class BlogValidator extends Validator {
 		
 		String actionKey = getActionKey();
 		if (actionKey.equals("/blog/save"))
-			controller.render("add.html");
+			controller.render("/wp/view/blog/add.html");
 		else if (actionKey.equals("/blog/update"))
-			controller.render("edit.html");
+			controller.render("/wp/view/blog/edit.html");
 	}
 }

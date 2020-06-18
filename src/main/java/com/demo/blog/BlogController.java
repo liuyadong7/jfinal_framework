@@ -14,16 +14,16 @@ import com.demo.common.model.Blog;
  */
 @Before(BlogInterceptor.class)
 public class BlogController extends Controller {
-	
+
 	@Inject
 	BlogService service;
-	
 	public void index() {
 		setAttr("blogPage", service.paginate(getParaToInt(0, 1), 10));
-		render("blog.html");
+		render("/wp/view/blog/blog.html");
 	}
 	
 	public void add() {
+		render("/wp/view/blog/add.html");
 	}
 	
 	/**
@@ -38,6 +38,7 @@ public class BlogController extends Controller {
 	
 	public void edit() {
 		setAttr("blog", service.findById(getParaToInt()));
+		render("/wp/view/blog/edit.html");
 	}
 	
 	/**
@@ -55,5 +56,3 @@ public class BlogController extends Controller {
 		redirect("/blog");
 	}
 }
-
-

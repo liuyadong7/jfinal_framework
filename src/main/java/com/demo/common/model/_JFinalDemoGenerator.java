@@ -1,7 +1,8 @@
 package com.demo.common.model;
 
 import javax.sql.DataSource;
-import com.demo.common.DemoConfig;
+
+import com.RunConfig;
 import com.jfinal.kit.PathKit;
 import com.jfinal.plugin.activerecord.dialect.MysqlDialect;
 import com.jfinal.plugin.activerecord.generator.Generator;
@@ -16,9 +17,10 @@ import com.jfinal.plugin.druid.DruidPlugin;
 public class _JFinalDemoGenerator {
 	
 	public static DataSource getDataSource() {
-		DruidPlugin druidPlugin = DemoConfig.createDruidPlugin();
+		/*DruidPlugin druidPlugin = RunConfig.createDruidPlugin();
 		druidPlugin.start();
-		return druidPlugin.getDataSource();
+		return druidPlugin.getDataSource();*/
+		return null;
 	}
 	
 	public static void main(String[] args) {
@@ -60,6 +62,7 @@ public class _JFinalDemoGenerator {
 		generator.generate();
 	}
 }
+
 
 
 
