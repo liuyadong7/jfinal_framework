@@ -4,8 +4,17 @@
 
     <groupId>com.demo</groupId>
     <artifactId>jfinal_framework</artifactId>
-    <version>4.8</version>
-    <packaging>war</packaging>
+    <version>1.0</version>
+
+    <modules>
+        <module>common</module>
+        <module>route</module>
+        <module>parent</module>
+        <module>modules</module>
+        <module>system</module>
+    </modules>
+
+    <packaging>pom</packaging>
 
     <name>jfinal_framework</name>
 
@@ -38,7 +47,7 @@
         <dependency>
             <groupId>com.jfinal</groupId>
             <artifactId>jfinal</artifactId>
-            <version>4.8</version>
+            <version>4.9</version>
         </dependency>
 
         <!-- jfinal-undertow 开发、部署一体化 web 服务器 -->
@@ -96,6 +105,13 @@
             <groupId>com.jfinal</groupId>
             <artifactId>cos</artifactId>
             <version>2019.8</version>
+        </dependency>
+
+        <!-- jackson JSON的处理 -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.11.0</version>
         </dependency>
 
         <dependency>
